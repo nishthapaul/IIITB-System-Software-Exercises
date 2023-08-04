@@ -16,8 +16,8 @@ do
 		display_all )
 			echo display all selected ;;
 		exit )
-			echo "NOT EXITING RN !!!"
-			echo "Press ctrl + D" ;;
+			echo "Bye Bye !!!"
+			exit ;;
 		* )
 			echo Please provide a number from 1 to 5
 	esac
