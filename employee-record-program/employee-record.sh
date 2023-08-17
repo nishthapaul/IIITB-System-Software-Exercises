@@ -22,7 +22,7 @@ do
 			echo search selected ;;
 		sort )
 			echo sort selected
-			sort -k 2n -k 1,1 records.txt > records.txt
+			sort -k 2n -k 1,1 records.txt
 			;;
 		display_all )
 			if [ -s $records_file ]
