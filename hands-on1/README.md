@@ -10,12 +10,13 @@ c. FIFO (mkfifo Library Function or mknod system call)
 Q3. Write a program to create a file and print the file descriptor value. Use creat() system call
 - creat(path, mode) is equivalent to
 open(path, O_CREAT | O_TRUNC | O_WRONLY, mode);
-f the file doesn't exist, it will create a new file, but if it exists, then no error.
+If the file doesn't exist, it will create a new file, but if it exists, then no error.
 
 Q4. Write a program to open an existing file with read write mode. Try O_EXCL flag also.
 - O_EXCL - This flag is used with O_CREAT.
 - to indicate that if the file already exists, it should not be opened, and open() will give error.
-Then, how to "open an existing file with read write mode. Try O_EXCL flag also." ???
+- It wants that we should bring a non existing filE and it will create
+- But the question says to try to open an existing file with O_EXCL, but it will giev error. SO they just want us to witness an error.
 
 Q5. Write a program to create five new files with infinite loop. Execute the program in the background and check the file descriptor table at /proc/pid/fd.
 - Here, I used open() system call to create files.
@@ -26,5 +27,5 @@ send 0 in fd for stdin
 send 1 in fd for stdin
 Tell the user to give (;) to stop writing
 
-Q7. Write a program to copy file1 into file2 ($cp file1 file2).
+Q7. Write a program to copy file1 into file2 - replicate cp command
 
