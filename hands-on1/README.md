@@ -33,3 +33,8 @@ Q8.
 
 Q9. Write a program to print the information of inode about a given file.
 - Use stat system call which takes in file name and struct stat pointer (which will be filled with inode details and can be used later)
+
+Q14. 14 Write a program to find the type of a file.
+a. Input should be taken from command line.
+b. program should be able to identify any type of a file
+- Learnt from book
