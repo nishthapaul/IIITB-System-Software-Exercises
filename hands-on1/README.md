@@ -29,3 +29,7 @@ Q6. Write a program to take input from STDIN and display on STDOUT. Use only rea
 
 Q7. Write a program to copy file1 into file2 - replicate cp command
 
+Q8. 
+
+Q9. Write a program to print the information of inode about a given file.
+- Use stat system call which takes in file name and struct stat pointer (which will be filled with inode details and can be used later)
