@@ -23,9 +23,9 @@ Q5. Write a program to create five new files with infinite loop. Execute the pro
 If we specify O_CREAT, then we have to give a mode otherwise it will take a random vllue from the buffer.
 
 Q6. Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
-send 0 in fd for stdin
-send 1 in fd for stdin
-Tell the user to give (;) to stop writing
+- send 0 in fd for stdin
+- send 1 in fd for stdin
+- Tell the user to give (;) to stop writing
 
 Q7. Write a program to copy file1 into file2 - replicate cp command
 
