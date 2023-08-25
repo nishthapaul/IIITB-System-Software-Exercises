@@ -3,7 +3,7 @@
 #include <time.h>
 int main(int nargs, char* filenames[]) {
     if (nargs == 1) {
-        printf("No file provided !!!");
+        printf("No file provided !!! \n");
         return 0;
     }
     struct stat st;
