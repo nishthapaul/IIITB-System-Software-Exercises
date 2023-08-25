@@ -40,6 +40,7 @@ Q9. Write a program to print the information of inode about a given file.
 Q14. Write a program to find the type of a file.
 a. Input should be taken from command line.
 b. program should be able to identify any type of a file
-- Learnt from book
-- Chapter 15
+- Learnt from book (Chapter 15)
 - Give the file name as argument while running - ```./a.out <filename>```
+- Use lstat() instead of stat()
+- stat() is recognises symbolic link as regular file, while lstat() recognises it as a softlink and returns information of a link.

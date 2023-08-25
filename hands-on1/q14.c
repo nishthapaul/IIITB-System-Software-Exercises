@@ -7,7 +7,7 @@ int main(int nargs, char* filenames[]) {
         return 0;
     }
     struct stat st;
-    int ret = stat(filenames[1], &st);
+    int ret = lstat(filenames[1], &st);
     if (ret == -1) {
         printf("Error in opening and fetching the details of file \n");
         return 0;
