@@ -29,6 +29,7 @@ Q6. Write a program to take input from STDIN and display on STDOUT. Use only rea
 
 Q7. Write a program to copy file1 into file2 - replicate cp command
 - Use ```int main(int nargs, char* filenames[])``` to take arguments into main method. Variables name can differ.
+- Give the file name as argument while running - ```./a.out <filename>```
 
 Q8. 
 
