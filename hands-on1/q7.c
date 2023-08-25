@@ -4,12 +4,15 @@
 #include <stdio.h>
 #include <unistd.h>
 int main(int nargs, char* filenames[]) {
-	printf("a: %d", a);
-	int fd_read = open("readFrom.txt", O_RDONLY);
-	int fd_write = open("readTo.txt", O_WRONLY | O_CREAT, 0777);
+	if (nargs != 2) {
+        printf("Insufficient arguments !! 2 required. \n");
+        return 0;
+    }
+	int fd_read = open(filenames[1], O_RDONLY);
+	int fd_write = open(filenames[2], O_WRONLY | O_CREAT, 0777);
 
 	if (fd_read == -1) {
-		printf("File readFrom.txt doesn't exist");
+		printf("File %s doesn't exist \n", filenames[1]);
 		return 0;
 	}
 
