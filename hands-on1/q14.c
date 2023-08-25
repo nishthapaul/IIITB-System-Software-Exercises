@@ -1,10 +1,14 @@
 #include <sys/stat.h>
 #include <stdio.h>
 #include <time.h>
-int main() {
+int main(int nargs, char* filenames[]) {
+    if (nargs == 1) {
+        printf("No file provided !!!");
+        return 0;
+    }
     struct stat st;
-    int a = stat("softlink", &st);
-    if (a == -1) {
+    int ret = stat(filenames[1], &st);
+    if (ret == -1) {
         printf("Error in opening and fetching the details of file \n");
         return 0;
     }
