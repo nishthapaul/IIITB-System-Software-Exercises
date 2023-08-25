@@ -43,4 +43,9 @@ b. program should be able to identify any type of a file
 - Learnt from book (Chapter 15)
 - Give the file name as argument while running - ```./a.out <filename>```
 - Use lstat() instead of stat()
-- stat() is recognises symbolic link as regular file, while lstat() recognises it as a softlink and returns information of a link.
+- stat():
+When you use the stat() function on a symbolic link, it returns information about the target of the link (the file or directory that the link points to), rather than the link itself.
+If you use stat() on a symbolic link, you won't be able to differentiate between the link itself and the target it points to.
+lstat():
+The lstat() function is specifically designed to provide information about the symbolic link itself, rather than its target.
+When you use lstat() on a symbolic link, it returns information about the link itself, including whether it is a symbolic link and the permissions of the link.
