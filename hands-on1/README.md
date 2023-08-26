@@ -37,6 +37,15 @@ Q9. Write a program to print the information of inode about a given file.
 - Use stat system call which takes in file name and struct stat pointer (which will be filled with inode details and can be used later)
 - Chapter 15
 
+Q10. Write a program to open a file with read write mode, write 10 bytes, move the file pointer by 10 bytes (use lseek) and write again 10 bytes.
+a. check the return value of lseek
+b. open the file with od and check the empty spaces in between the data.
+- lseek(fd, 0, SEEK_CUR) with 0 offset bytes is used to retrieve the current location of file offset
+-  ```od -a q10-file.txt ```
+0000000    a   b   c   d   e   f   g   h   i   j nul nul nul nul nul nul
+0000020  nul nul nul nul   q   r   s   t   u   v   w   x   y   z        
+0000036
+
 Q14. Write a program to find the type of a file.
 a. Input should be taken from command line.
 b. program should be able to identify any type of a file
