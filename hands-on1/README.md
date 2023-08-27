@@ -58,3 +58,16 @@ If you use stat() on a symbolic link, you won't be able to differentiate between
 lstat():
 The lstat() function is specifically designed to provide information about the symbolic link itself, rather than its target.
 When you use lstat() on a symbolic link, it returns information about the link itself, including whether it is a symbolic link and the permissions of the link.
+
+Q16. Implement Mandatory Locking
+2 files - q16-shared.c and q16-exclusive.c
+Compile - ```gcc -o shared q16-shared.c ``` and ```gcc -o excl q16-exclusive.c ```
+Run - ```./shared``` and ```./excl```
+We can run 2 shared simultaneously, and both can enter in critical section together.
+But, if one shared is in critical section, exclusive can't enter and vica versa.
+
+Q17. Ticket Reservation
+If lseek() is not used, then it will append the new number at the end
+Then, ```od -a ticket-info.txt ``` looks like this
+C nul nul nul   D nul nul nul 
+```od -a <filename>``` - to check the contents of the file
