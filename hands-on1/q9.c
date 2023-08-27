@@ -4,7 +4,10 @@
 int main() {
     struct stat st;
     int a = stat("q1.c", &st);
-    printf("a: %d \n", a);
+    if (a == -1) {
+        pritntf("Error opening and fetching the details of file");
+        return 0;
+    }
     printf("Inode Number - %ld \n", (long) st.st_ino);
     printf("Number of Hard Links - %ld \n", (long) st.st_nlink);
     printf("User ID of file owner - %ld \n", (long) st.st_uid);
@@ -15,4 +18,7 @@ int main() {
     printf("Time of last access - %s", ctime(&st.st_atime));
     printf("Time of last data modification - %s", ctime(&st.st_mtime));
     printf("Time of last file status change - %s", ctime(&st.st_ctime));
+    printf("%d \n", S_IFMT);
+    printf("%d \n", st.st_mode & S_IFMT);
+    printf("%d \n", S_IFREG);
 }
