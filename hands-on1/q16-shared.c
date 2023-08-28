@@ -9,4 +9,5 @@ int main() {
     printf("Acquiring shared lock \n");
     getchar();
     flock(fd, LOCK_UN);
+    close(fd);
 }

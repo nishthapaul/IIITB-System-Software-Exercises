@@ -9,4 +9,5 @@ int main() {
     printf("Acquiring exclusive lock \n");
     getchar();
     flock(fd, LOCK_UN);
+    close(fd);
 }
