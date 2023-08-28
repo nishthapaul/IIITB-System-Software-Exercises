@@ -46,6 +46,12 @@ b. open the file with od and check the empty spaces in between the data.
 0000020  nul nul nul nul   q   r   s   t   u   v   w   x   y   z        
 0000036
 
+Q11. 
+
+Q12. 
+
+Q13. 
+
 Q14. Write a program to find the type of a file.
 a. Input should be taken from command line.
 b. program should be able to identify any type of a file
@@ -59,6 +65,9 @@ lstat():
 The lstat() function is specifically designed to provide information about the symbolic link itself, rather than its target.
 When you use lstat() on a symbolic link, it returns information about the link itself, including whether it is a symbolic link and the permissions of the link.
 
+Q15. Write a program to display the environmental variable of the user (use environ).
+```environ``` is a array of character arrays or aray of strings
+
 Q16. Implement Mandatory Locking
 2 files - q16-shared.c and q16-exclusive.c
 Compile - ```gcc -o shared q16-shared.c ``` and ```gcc -o excl q16-exclusive.c ```
@@ -71,3 +80,5 @@ If lseek() is not used, then it will append the new number at the end
 Then, ```od -a ticket-info.txt ``` looks like this
 C nul nul nul   D nul nul nul 
 ```od -a <filename>``` - to check the contents of the file
+
+Q18. 
