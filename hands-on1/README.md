@@ -1,3 +1,5 @@
+// https://github.com/nishthapaul/IIITB-System-Software-Exercises
+
 Q1. Create the following types of a files using system call
 a. soft link (symlink system call)
 b. hard link (link system call)
@@ -20,7 +22,7 @@ Q4. Write a program to open an existing file with read write mode. Try O_EXCL fl
 
 Q5. Write a program to create five new files with infinite loop. Execute the program in the background and check the file descriptor table at /proc/pid/fd.
 - Here, I used open() system call to create files.
-If we specify O_CREAT, then we have to give a mode otherwise it will take a random vllue from the buffer.
+If we specify O_CREAT, then we have to give a mode otherwise it will take a random value from the buffer.
 
 Q6. Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
 - send 0 in fd for stdin
@@ -31,7 +33,7 @@ Q7. Write a program to copy file1 into file2 - replicate cp command
 - Use ```int main(int nargs, char* filenames[])``` to take arguments into main method. Variables name can differ.
 - Give 2 file names as arguments while running - ```./a.out <source filename> <destination filename>```
 
-Q8. 
+Q8. Write a program to open a file in read only mode, read line by line and display each line as it is read. Close the file when end of file is reached.
 
 Q9. Write a program to print the information of inode about a given file.
 - Use stat system call which takes in file name and struct stat pointer (which will be filled with inode details and can be used later)
@@ -89,4 +91,8 @@ Then, ```od -a ticket-info.txt ``` looks like this
 C nul nul nul   D nul nul nul 
 ```od -a <filename>``` - to check the contents of the file
 
-Q18. 
+Q18. Write a program to perform Record locking.
+a. Implement write lock
+b. Implement read lock
+Create three records in a file. Whenever you access a particular record, first lock it then modify/access to avoid race condition.
+TODO: Write later after doubt clarification
