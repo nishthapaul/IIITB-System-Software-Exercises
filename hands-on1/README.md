@@ -46,7 +46,10 @@ b. open the file with od and check the empty spaces in between the data.
 0000020  nul nul nul nul   q   r   s   t   u   v   w   x   y   z        
 0000036
 
-Q11. 
+Q11. Write a program to open a file, duplicate the file descriptor and append the file with both the descriptors and check whether the file is updated properly or not. a. use dup b. use dup2 c. use fcntl
+- dup() duplicates an existing object descriptor and returns its value to the calling process
+- In dup2(), the value of the new descriptor fildes2 is specified. If fildes and fildes2 are equal, then dup2() just returns fildes2; no other changes are made to the existing descriptor. Otherwise, if descriptor fildes2 is already in use, it is first deallocated as if a close(2) call had been done first.
+- fcntl() - If we give a file descriptor which is already in use, it will assign the next greater file descriptor.
 
 Q12.Write a program to find out the opening mode of a file. Use fcntl.
 - Give the file name as argument while running - ```./a.out <filename>```. This will tell which mode is the file open in.
