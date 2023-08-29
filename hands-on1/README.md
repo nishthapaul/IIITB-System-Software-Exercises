@@ -55,7 +55,7 @@ Q12.Write a program to find out the opening mode of a file. Use fcntl.
 - Macro: int O_ACCMODE
 This macro is a mask that can be bitwise-ANDed with the file status flag value to recover the file access mode, assuming that a standard file access mode is in use.
 
-Q13. 
+Q13. Write a program to wait for a STDIN for 10 seconds using select. Write a proper print statement to verify whether the data is available within 10 seconds or not (check in $man 2 select).
 
 Q14. Write a program to find the type of a file.
 a. Input should be taken from command line.
