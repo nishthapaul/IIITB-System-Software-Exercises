@@ -48,7 +48,12 @@ b. open the file with od and check the empty spaces in between the data.
 
 Q11. 
 
-Q12. 
+Q12.Write a program to find out the opening mode of a file. Use fcntl.
+- Give the file name as argument while running - ```./a.out <filename>```. This will tell which mode is the file open in.
+- I have written the code to open the file in RDWR mode, that is why this file will always be opened in Read/Write mode. If you want to open in Read only or Write only mode, then use O_RDONLY / O_WRONLY. Then the output will be shown accordingly.
+- The portable file access modes O_RDONLY, O_WRONLY, and O_RDWR may not correspond to individual bits. To determine the file access mode with fcntl, you must extract the access mode bits from the retrieved file status flags, using the O_ACCMODE mask.
+- Macro: int O_ACCMODE
+This macro is a mask that can be bitwise-ANDed with the file status flag value to recover the file access mode, assuming that a standard file access mode is in use.
 
 Q13. 
 
