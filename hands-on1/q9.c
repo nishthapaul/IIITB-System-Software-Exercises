@@ -5,7 +5,7 @@ int main() {
     struct stat st;
     int a = stat("q1.c", &st);
     if (a == -1) {
-        pritntf("Error opening and fetching the details of file");
+        printf("Error opening and fetching the details of file");
         return 0;
     }
     printf("Inode Number - %ld \n", (long) st.st_ino);
