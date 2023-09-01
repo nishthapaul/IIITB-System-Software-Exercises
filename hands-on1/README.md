@@ -1,4 +1,4 @@
-// https://github.com/nishthapaul/IIITB-System-Software-Exercises
+https://github.com/nishthapaul/IIITB-System-Software-Exercises
 
 Q1. Create the following types of a files using system call
 a. soft link (symlink system call)
@@ -96,3 +96,15 @@ a. Implement write lock
 b. Implement read lock
 Create three records in a file. Whenever you access a particular record, first lock it then modify/access to avoid race condition.
 TODO: Write later after doubt clarification
+
+Q19. 
+
+Q20. 
+
+Q21. Write a program, call fork and print the parent and child process id.
+- fork system call returns the pid of its child.
+- So, when parent calls fork(), pid of its child will be printed. We can verify this by printing the PID inside the child.
+- When child calls fork(), it doesn't have a child, so it will return 0.
+- We can check on the basis of pid returned by fork() that which process we want to run.
+
+Q22. 
