@@ -1,6 +1,6 @@
 /*
 ============================================================================
-Name : q20.c
+Name : q20-server.c
 Author : Nishtha Paul
 Q. Write two programs so that both can communicate by FIFO -Use one way communication.
 Date: 10th Oct, 2023.
